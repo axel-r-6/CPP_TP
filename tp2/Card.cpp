@@ -7,7 +7,7 @@ void Card::print() const
 {
     switch (_value)
     {
-    case 1:
+    case 14:
         std::cout << "As de " << _color << std::endl;
         break;
     case 11:
@@ -35,4 +35,10 @@ int Card::operator==(Card c) const
 int Card::operator<(Card c) const
 {
     return (_value < c._value);
+}
+
+std::ostream &operator<<(std::ostream &os, const Card &c)
+{
+    os << c._value << " de " << c._color;
+    return os;
 }

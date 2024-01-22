@@ -1,4 +1,4 @@
-#include "Card.hpp"
+#include "Player.hpp"
 
 int main()
 {
@@ -23,4 +23,14 @@ int main()
     c11.print();
     c12.print();
     c13.print();
+
+    Player p1("Gerald");
+    Player p2("Julien");
+    Player::deal_all_cards(p1, p2);
+
+    for (size_t i = 0; i < 16; ++i)
+    {
+        std::cout << p1[i] << std::endl;
+        std::cout << p2[i] << std::endl;
+    }
 }

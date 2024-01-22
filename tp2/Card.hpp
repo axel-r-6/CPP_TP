@@ -12,4 +12,5 @@ public:
     void print() const;
     int operator==(Card c) const;
     int operator<(Card c) const;
+    friend std::ostream &operator<<(std::ostream &os, const Card &c);
 };
