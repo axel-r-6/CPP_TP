@@ -1,7 +1,10 @@
 #include "Card.hpp"
+#include <stdexcept>
 
 Card::Card(const unsigned int value, const std::string &color)
-    : _value(value), _color(color) {}
+    : _value(value), _color(color)
+{
+}
 
 void Card::print() const
 {

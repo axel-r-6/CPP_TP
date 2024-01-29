@@ -30,7 +30,18 @@ int main()
 
     for (size_t i = 0; i < 16; ++i)
     {
-        std::cout << p1[i] << std::endl;
-        std::cout << p2[i] << std::endl;
+        p1[i].print();
+        std::cout << std::endl;
+        p2[i].print();
+        std::cout << std::endl;
     }
+
+    // Player::play(p1, p2);
+    while (!Player::play(p1, p2))
+    {
+        std::cout << p1 << " : " << p1.getScore() << std::endl;
+        std::cout << p2 << " : " << p2.getScore() << std::endl;
+    }
+
+    Player::winner(p1, p2);
 }
